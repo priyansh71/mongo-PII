@@ -1,5 +1,4 @@
-{
-    "users" : [
+[
         {
             "SSN" : 183293681,
             "name" : "Priyansh",
@@ -20,5 +19,4 @@
             "tag2" : "Female",
             "tag3" : "Likes Game of Thrones"
         }
-    ]
-}
+]
