@@ -1,0 +1,24 @@
+{
+    "users" : [
+        {
+            "SSN" : 183293681,
+            "name" : "Priyansh",
+            "regex" : "/some sort of regex",
+            "country" : "India",
+            "sector" : "Engineering",
+            "tag1" : "Developer",
+            "tag2" : "Male",
+            "tag3" : "Dislikes Harry Potter "
+        },
+        {
+            "SSN" : 22138220,
+            "name" : "Rishika",
+            "regex" : "/some sort of regex here as well",
+            "country" : "Maldives",
+            "sector" : "Finance",
+            "tag1" : "Rich",
+            "tag2" : "Female",
+            "tag3" : "Likes Game of Thrones"
+        }
+    ]
+}
