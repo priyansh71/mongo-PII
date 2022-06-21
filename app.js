@@ -8,7 +8,11 @@ import EtagSchema from './schemas/Etag.js';
 const app = express();
 dotenv.config();
 
-const response = await fetch("https://raw.githubusercontent.com/priyansh71/mongo-PII/main/PII.json?token=GHSAT0AAAAAABMBBCY35SJ4VNP25A3PIRFCYVRREYA");
+const piiLink = "https://raw.githubusercontent.com/priyansh71/mongo-PII/main/PII.json?token=GHSAT0AAAAAABMBBCY35SJ4VNP25A3PIRFCYVRREYA";
+const etagDocID = "62b0c422927a4502dc07003d";
+const PORT = 3000;
+
+const response = await fetch(piiLink);
 const etag = response.headers.get('etag');
 const data = await response.json();
 
@@ -107,7 +111,7 @@ app.post("/", (req, res) => {
 
     // Update Etag for the future so
     Etag.findByIdAndUpdate({
-      _id: "62b0c422927a4502dc07003d"
+      _id: etagDocID
       }, {
         etag: etag
       }, (error, response) => {
@@ -121,6 +125,6 @@ app.post("/", (req, res) => {
       })
 })
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
   console.log("Server started.");
 });
