@@ -8,7 +8,7 @@ import EtagSchema from './schemas/Etag.js';
 const app = express();
 dotenv.config();
 
-const response = await fetch("https://jsonkeeper.com/b/0RGY");
+const response = await fetch("https://raw.githubusercontent.com/priyansh71/mongo-PII/main/PII.json?token=GHSAT0AAAAAABMBBCY35SJ4VNP25A3PIRFCYVRREYA");
 const etag = response.headers.get('etag');
 const data = await response.json();
 
@@ -119,9 +119,6 @@ app.post("/", (req, res) => {
           res.send("Error updating ETag.");
         }
       })
-
-    res.status(200);
-    res.end(); 
 })
 
 app.listen(process.env.PORT, () => {
