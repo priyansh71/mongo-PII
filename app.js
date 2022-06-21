@@ -8,7 +8,7 @@ import EtagSchema from './schemas/Etag.js';
 const app = express();
 dotenv.config();
 
-const response = await fetch('http://localhost:3000/users');
+const response = await fetch("https://jsonkeeper.com/b/0RGY");
 const etag = response.headers.get('etag');
 const data = await response.json();
 
